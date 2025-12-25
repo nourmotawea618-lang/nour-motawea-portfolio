@@ -3,343 +3,313 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nour Motawea | Senior Content Creator</title>
+    <title>Nour Motawea | Senior Content Creator & Strategist</title>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
         :root {
-            /* باليت الألوان من الصورة المرفقة */
-            --primary-green: #1C5838;    /* أخضر غامق (للعناوين والفوتر) */
-            --darkest-green: #09371F;    /* أخضر أغمق (للهيدر) */
-            --gold-accent: #C2AA6A;      /* ذهبي (للأزرار واللمسات الفنية) */
-            --dusty-pink: #E8C0B8;       /* وردي هادئ (للخلفيات الثانوية) */
-            --light-bg: #fcf7f5;         /* أبيض مائل للوردي (للخلفية العامة) */
-            --text-color: #333333;
-            --white: #ffffff;
-            --shadow: 0 4px 15px rgba(28, 88, 56, 0.15); /* ظل بلون أخضر خفيف */
+            --primary: #1C5838;       /* أخضر غامق */
+            --dark: #09371F;          /* أخضر أغمق */
+            --gold: #C2AA6A;          /* ذهبي */
+            --pink: #E8C0B8;          /* وردي هادئ */
+            --bg: #FAFAFA;            /* أبيض ناصع */
+            --text: #333;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
         body {
             font-family: 'Cairo', sans-serif;
-            background-color: var(--light-bg);
-            color: var(--text-color);
-            line-height: 1.7;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
             overflow-x: hidden;
         }
 
-        /* --- Header Section --- */
-        header {
-            background: linear-gradient(135deg, var(--darkest-green), var(--primary-green));
-            color: var(--white);
-            padding: 5rem 2rem;
-            text-align: center;
-            border-bottom: 5px solid var(--gold-accent);
+        /* --- Decorative Patterns (Geometric) --- */
+        .pattern-dots {
+            background-image: radial-gradient(var(--gold) 1px, transparent 1px);
+            background-size: 20px 20px;
+            opacity: 0.15;
         }
 
-        .profile-wrapper {
+        .section-connector {
+            display: flex;
+            justify-content: center;
+            margin: -30px 0;
+            z-index: 10;
             position: relative;
-            display: inline-block;
+        }
+
+        .arrow-down {
+            width: 40px;
+            height: 40px;
+            background: var(--gold);
+            clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-10px);}
+            60% {transform: translateY(-5px);}
+        }
+
+        /* --- Header --- */
+        header {
+            background: linear-gradient(135deg, var(--dark), var(--primary));
+            color: white;
+            padding: 4rem 2rem 6rem; /* مساحة إضافية من تحت للشكل الهندسي */
+            text-align: center;
+            position: relative;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
         }
 
         .profile-img {
-            width: 190px;
-            height: 190px;
+            width: 180px;
+            height: 180px;
             border-radius: 50%;
-            border: 4px solid var(--gold-accent); /* إطار ذهبي */
+            border: 4px solid var(--gold);
             object-fit: cover;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-            margin-bottom: 1.5rem;
-            padding: 3px;
-            background: var(--white);
+            margin-bottom: 1rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
 
-        h1 {
-            font-size: 2.8rem;
-            margin-bottom: 0.5rem;
-            font-weight: 900;
-        }
-
-        .job-title {
-            font-size: 1.3rem;
-            color: var(--dusty-pink); /* لون وردي للمسمى الوظيفي */
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        .bio {
-            max-width: 650px;
-            margin: 0 auto 2rem;
-            font-size: 1.15rem;
-            opacity: 0.95;
-            font-weight: 400;
-        }
-
-        /* --- Social & Contact Buttons --- */
-        .header-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            padding: 12px 25px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 700;
-            transition: all 0.3s ease;
-            font-size: 1rem;
-        }
-
-        .btn-whatsapp {
-            background-color: #25D366; /* لون واتساب الرسمي */
-            color: white;
-        }
+        h1 { font-size: 2.5rem; font-weight: 900; margin-bottom: 0.5rem; }
+        .title { color: var(--gold); font-size: 1.1rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
         
-        .btn-whatsapp:hover {
-            background-color: #128C7E;
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+        .social-links { margin-top: 1.5rem; }
+        .social-links a {
+            color: white; font-size: 1.5rem; margin: 0 10px; transition: 0.3s;
         }
+        .social-links a:hover { color: var(--gold); transform: translateY(-5px); }
 
-        .btn-email {
-            background-color: var(--gold-accent);
-            color: var(--darkest-green);
-        }
-
-        .btn-email:hover {
-            background-color: #e0c582;
-            transform: translateY(-3px);
-        }
-
-        .social-icons a {
-            color: var(--white);
-            font-size: 1.8rem;
-            margin: 0 10px;
-            transition: 0.3s;
-        }
-        .social-icons a:hover { color: var(--gold-accent); }
-
-        /* --- Sections Style --- */
-        section {
+        /* --- Story Section (Bio) --- */
+        .story-section {
             padding: 5rem 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+        }
+
+        .story-section::before {
+            content: '"';
+            font-size: 8rem;
+            color: var(--pink);
+            position: absolute;
+            top: -20px;
+            right: 20px;
+            opacity: 0.4;
+            font-family: serif;
+        }
+
+        .main-quote {
+            font-size: 1.8rem;
+            color: var(--primary);
+            font-weight: 800;
+            margin-bottom: 2rem;
+            display: inline-block;
+            border-bottom: 3px solid var(--gold);
+            padding-bottom: 10px;
+        }
+
+        .story-text {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 1rem;
+            text-align: justify;
+            direction: rtl;
+        }
+
+        /* --- Stats Grid (Numbers) --- */
+        .stats-container {
+            background: var(--dark);
+            color: white;
+            padding: 4rem 2rem;
+            margin: 2rem 0;
+            background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 10px, transparent 10px, transparent 20px);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .stat-item h3 { font-size: 2.5rem; color: var(--gold); margin-bottom: 0.5rem; }
+        .stat-item p { font-size: 1rem; opacity: 0.9; }
+
+        /* --- Skills Section --- */
+        .skills-section {
+            padding: 4rem 2rem;
             max-width: 1200px;
             margin: 0 auto;
         }
 
         .section-title {
             text-align: center;
-            font-size: 2.2rem;
-            margin-bottom: 3.5rem;
-            color: var(--primary-green);
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 3rem;
             position: relative;
-            font-weight: 800;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
         }
-
+        
         .section-title::after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 4px;
-            background: var(--gold-accent);
-            margin: 15px auto 0;
-            border-radius: 2px;
+            content: ''; display: block; width: 60px; height: 4px; background: var(--gold); margin: 10px auto;
         }
 
-        /* --- Gallery Grid --- */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-right: 4px solid var(--gold);
+            transition: 0.3s;
+        }
+        
+        .skill-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        .skill-card i { color: var(--primary); font-size: 1.5rem; margin-bottom: 10px; display: block; }
+        .skill-card h4 { color: var(--dark); margin-bottom: 0.5rem; font-weight: 700; }
+
+        /* --- Experience Section (Timeline Vibe) --- */
+        .exp-section {
+            background-color: #f4f4f4;
+            padding: 4rem 2rem;
+        }
+
+        .exp-list {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            gap: 15px;
+        }
+
+        .exp-item {
+            background: white;
+            padding: 1.2rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .exp-role { font-weight: bold; color: var(--dark); }
+        .exp-company { color: var(--primary); }
+
+        /* --- Gallery Grid (Images) --- */
+        .gallery-section { padding: 4rem 2rem; max-width: 1200px; margin: 0 auto; }
+        
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
         }
 
         .gallery-item {
-            background: var(--white);
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: 0.4s;
-            cursor: pointer;
-            border: 1px solid rgba(0,0,0,0.05);
-        }
-
-        .gallery-item:hover {
-            transform: translateY(-7px);
-            box-shadow: 0 12px 30px rgba(28, 88, 56, 0.2);
-            border-color: var(--gold-accent);
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 240px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .gallery-caption {
-            padding: 1.2rem;
-            text-align: center;
-            font-weight: 700;
-            color: var(--primary-green);
-            background: linear-gradient(to top, #fff, #fafafa);
-        }
-
-        /* --- Video Section --- */
-        .video-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-        }
-
-        .video-card {
-            background: var(--white);
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            border-top: 5px solid var(--primary-green);
-        }
-
-        .video-placeholder {
-            width: 100%;
-            height: 220px;
-            background: #f0f0f0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary-green);
-            font-size: 3.5rem;
             position: relative;
-        }
-        
-        .video-placeholder::before {
-            content: 'Click Link Below';
-            position: absolute;
-            font-size: 0.8rem;
-            bottom: 10px;
-            opacity: 0.6;
-        }
-
-        .video-info {
-            padding: 2rem;
-        }
-
-        .video-info h3 {
-            color: var(--primary-green);
-            margin-bottom: 0.5rem;
-        }
-
-        .btn-watch {
-            display: block;
-            background: var(--primary-green);
-            color: white;
-            padding: 1rem;
-            text-decoration: none;
-            border-radius: 8px;
-            margin-top: 15px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            cursor: pointer;
             transition: 0.3s;
-            text-align: center;
-            font-weight: bold;
+        }
+        .gallery-item:hover { transform: scale(1.02); }
+        .gallery-item img { width: 100%; height: 250px; object-fit: cover; display: block; }
+        .gallery-caption {
+            position: absolute; bottom: 0; left: 0; width: 100%;
+            background: rgba(9, 55, 31, 0.9); color: white;
+            padding: 10px; text-align: center; font-size: 0.9rem;
         }
 
-        .btn-watch:hover {
-            background: var(--gold-accent);
-            color: var(--darkest-green);
+        /* --- Media Links (Drive & Showreel) --- */
+        .media-section {
+            background: var(--dark);
+            padding: 4rem 2rem;
+            color: white;
+            text-align: center;
         }
+
+        .media-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .media-card {
+            background: rgba(255,255,255,0.1);
+            border: 2px solid var(--gold);
+            padding: 2rem;
+            border-radius: 15px;
+            width: 300px;
+            transition: 0.3s;
+            text-decoration: none;
+            color: white;
+        }
+
+        .media-card:hover { background: var(--gold); color: var(--dark); transform: translateY(-10px); }
+        .media-icon { font-size: 3rem; margin-bottom: 1rem; display: block; }
+        .media-title { font-size: 1.5rem; font-weight: bold; margin-bottom: 0.5rem; display: block; }
+        .media-desc { font-size: 0.9rem; opacity: 0.8; display: block; }
 
         /* --- Footer --- */
         footer {
-            background-color: var(--darkest-green);
-            color: var(--white);
+            background: var(--text);
+            color: white;
             text-align: center;
             padding: 4rem 2rem;
-            margin-top: 4rem;
             position: relative;
-        }
-        
-        footer::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: var(--gold-accent);
+            border-top: 5px solid var(--gold);
         }
 
-        .footer-cta h2 {
-            color: var(--gold-accent);
-            margin-bottom: 1rem;
-        }
-
-        /* --- Lightbox --- */
-        .lightbox {
-            display: none;
-            position: fixed;
-            z-index: 2000;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(9, 55, 31, 0.95); /* خلفية خضراء غامقة جداً */
-            justify-content: center;
-            align-items: center;
-            backdrop-filter: blur(5px);
-        }
-
-        .lightbox img {
-            max-width: 90%;
-            max-height: 85%;
-            border: 4px solid var(--gold-accent);
-            border-radius: 8px;
-            box-shadow: 0 0 40px rgba(0,0,0,0.5);
-        }
-
-        .lightbox:target { display: flex; }
-
-        .close-btn {
-            position: absolute;
-            top: 25px;
-            right: 40px;
-            color: var(--white);
-            font-size: 3.5rem;
-            text-decoration: none;
-            transition: 0.3s;
-        }
-        .close-btn:hover { color: var(--gold-accent); transform: rotate(90deg); }
-
-        /* --- Floating WhatsApp Button --- */
-        .floating-whatsapp {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background-color: #25D366;
+        .footer-cta h2 { font-size: 2rem; margin-bottom: 1rem; color: var(--gold); }
+        .btn-main {
+            display: inline-block;
+            background: var(--primary);
             color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            z-index: 1000;
+            padding: 12px 30px;
+            border-radius: 30px;
             text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            border: 2px solid var(--gold);
             transition: 0.3s;
         }
-        
-        .floating-whatsapp:hover {
-            transform: scale(1.1);
-            background-color: #128C7E;
+        .btn-main:hover { background: var(--gold); color: var(--dark); }
+
+        /* --- Lightbox (Zoom) --- */
+        .lightbox {
+            display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.9); z-index: 1000;
+            justify-content: center; align-items: center;
+        }
+        .lightbox img { max-width: 90%; max-height: 90%; border: 4px solid var(--gold); }
+        .lightbox:target { display: flex; }
+        .close-btn { position: absolute; top: 20px; right: 30px; color: white; font-size: 3rem; text-decoration: none; }
+
+        /* Floating WhatsApp */
+        .float-wa {
+            position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white;
+            width: 60px; height: 60px; border-radius: 50%; display: flex;
+            align-items: center; justify-content: center; font-size: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3); z-index: 999; text-decoration: none;
         }
 
     </style>
@@ -347,146 +317,195 @@
 <body>
 
     <header>
-        <div class="profile-wrapper">
-            <img src="nour.jpg" alt="Nour Motawea" class="profile-img" onerror="this.src='https://via.placeholder.com/190?text=NM'">
-        </div>
+        <img src="nour.jpg" alt="Nour Motawea" class="profile-img" onerror="this.src='https://via.placeholder.com/180?text=NM'">
+        <h1>NOUR MOTAWEA</h1>
+        <p class="title">Senior Content Creator | Social Media Strategist | Art Director</p>
         
-        <h1>Nour Motawea</h1>
-        <p class="job-title">Senior Content Creator & Strategist</p>
-        
-        <p class="bio">
-            "ورا كل كلمة قصة، ودي قصتي.."<br>
-            خبرة +4 سنوات في قيادة الإبداع وبناء الاستراتيجيات. شغفي هو تحويل الأفكار المعقدة إلى محتوى يلمس القلوب ويحقق الأرقام.
-        </p>
-        
-        <div class="header-buttons">
-            <a href="https://wa.me/201023084274" target="_blank" class="btn btn-whatsapp">
-                <i class="fab fa-whatsapp"></i> تواصل معي واتساب
-            </a>
-            <a href="mailto:nourmotawea618@gmail.com" class="btn btn-email">
-                <i class="fas fa-envelope"></i> إرسال إيميل
-            </a>
-        </div>
-
-        <div class="social-icons" style="margin-top: 20px;">
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-behance"></i></a>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/nour-motawea/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/nourmotaweaa?igsh=NnJnejU4dmg0bXU5" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:nourmotawea618@gmail.com"><i class="fas fa-envelope"></i></a>
         </div>
     </header>
 
-    <section>
-        <h2 class="section-title">استراتيجيات وتخطيط</h2>
+    <div class="section-connector"><div class="arrow-down"></div></div>
+
+    <section class="story-section pattern-dots">
+        <h2 class="main-quote">"ورا كل كلمة قصة، ودي قصتي.."</h2>
+        
+        <p class="story-text">
+            اتولدت في بيت كله كتابة.. بابا وماما كتاب كبار، والمكتبة كانت عالمي الأول. 
+            بدأت أكتب لنفسي فيديوهات "أزيك"، من كتابة السكريبت لتصويره ومونتاجه.
+        </p>
+        <p class="story-text">
+            كبرت وأنا بحضر ندوات، بقرا نقد وشعر وفلسفة، وهواية القراءة اتحولت لشغف بالكتابة. 
+            مثلت فترة طويلة من صغري للجامعة لمسرح علمني إزاي أرتجل، إزاي أبص للأمور من زاوية تانية، وإزاي أوصل إحساسي بالكلمة قبل الفعل.
+        </p>
+        <p class="story-text">
+            ورغم إني دخلت التجربة من غير خبرة، لكن مع كل خطوة اكتشفت شغفي بالكتابة وإن الوقوف قدام الكاميرا كان جزء من رحلتي.
+            دخلت مجال الفويس أوفر، وقدمت محتوى باللهجات العربية المختلفة، وده فتحلي باب تاني للتعبير عن نفسي وصنع محتوى بصوتي.
+        </p>
+    </section>
+
+    <div class="stats-container">
+        <h2 style="text-align:center; margin-bottom:2rem; color:var(--pink);">الأرقام تتحدث</h2>
+        <div class="stats-grid">
+            <div class="stat-item">
+                <h3>+5</h3>
+                <p>سنوات خبرة</p>
+            </div>
+            <div class="stat-item">
+                <h3>86k</h3>
+                <p>متابعين</p>
+            </div>
+            <div class="stat-item">
+                <h3>+100</h3>
+                <p>عميل (مصر/السعودية/فلسطين)</p>
+            </div>
+            <div class="stat-item">
+                <h3>+2000</h3>
+                <p>قطعة محتوى</p>
+            </div>
+            <div class="stat-item">
+                <h3>+100</h3>
+                <p>استراتيجية تسويق</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="skills-section">
+        <h2 class="section-title">مهاراتي وخبراتي</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <i class="fas fa-paint-brush"></i>
+                <h4>Creative Direction & Visual Storytelling</h4>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-bullseye"></i>
+                <h4>وضع استراتيجيات تسويق</h4>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-pen-fancy"></i>
+                <h4>Scriptwriting & Copywriting</h4>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-users"></i>
+                <h4>Community Management</h4>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-search-dollar"></i>
+                <h4>SEO & Blog Writing</h4>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-chart-line"></i>
+                <h4>Analytics & Reporting</h4>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-microphone"></i>
+                <h4>Voice Over (لهجات عربية)</h4>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-video"></i>
+                <h4>تصوير ومونتاج وموديلينج</h4>
+            </div>
+        </div>
+    </section>
+
+    <section class="exp-section">
+        <h2 class="section-title">خبرات وعلامات تجارية</h2>
+        <div class="exp-list">
+            <div class="exp-item">
+                <span class="exp-role">Senior Content Creator & Strategist</span>
+                <span class="exp-company">Traboneers Marketing (Palestine)</span>
+            </div>
+            <div class="exp-item">
+                <span class="exp-role">Digital Content Manager</span>
+                <span class="exp-company">Tawasul (Riyadh, KSA)</span>
+            </div>
+            <div class="exp-item">
+                <span class="exp-role">Head of Content & Social Media</span>
+                <span class="exp-company">Arizona Trader Services</span>
+            </div>
+            <div class="exp-item">
+                <span class="exp-role">Creative Content Lead</span>
+                <span class="exp-company">Aicon (Saudi Arabia)</span>
+            </div>
+            <div class="exp-item" style="display:block; text-align:center; background:none; border:none;">
+                <p style="color:#777;">+ عملاء آخرون: Mind, Body & Soul | OUT BOX | Raja Yoga | Al-Fares | Chemi Egypt</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery-section pattern-dots">
+        <h2 class="section-title">نماذج الاستراتيجيات والتخطيط</h2>
         <div class="gallery-grid">
             <div class="gallery-item" onclick="window.location='#img1'">
-                <img src="marketing_plan.png" alt="الخطة التسويقية">
-                <div class="gallery-caption">الخطة التسويقية الشاملة</div>
+                <img src="marketing_plan.png" alt="Marketing Plan">
+                <div class="gallery-caption">خطة تسويقية شاملة</div>
             </div>
             <div class="gallery-item" onclick="window.location='#img2'">
-                <img src="positioning_strategy.png" alt="خطة التموضع">
-                <div class="gallery-caption">استراتيجية التموضع (Positioning)</div>
+                <img src="positioning_strategy.png" alt="Positioning">
+                <div class="gallery-caption">استراتيجية التموضع</div>
             </div>
             <div class="gallery-item" onclick="window.location='#img3'">
-                <img src="content_agenda.png" alt="أجندة المحتوى">
-                <div class="gallery-caption">أجندة المحتوى الشهري</div>
+                <img src="content_agenda.png" alt="Content Agenda">
+                <div class="gallery-caption">أجندة المحتوى</div>
             </div>
             <div class="gallery-item" onclick="window.location='#img4'">
-                <img src="distribution_plan.png" alt="توزيع المحتوى">
-                <div class="gallery-caption">خطة توزيع المنصات</div>
+                <img src="swot_analysis.png" alt="SWOT">
+                <div class="gallery-caption">تحليل SWOT</div>
             </div>
             <div class="gallery-item" onclick="window.location='#img5'">
-                <img src="brand_persona.png" alt="شخصية البراند">
-                <div class="gallery-caption">بناء شخصية البراند (Persona)</div>
+                <img src="brand_persona.png" alt="Persona">
+                <div class="gallery-caption">شخصية البراند</div>
             </div>
-            <div class="gallery-item" onclick="window.location='#img6'">
-                <img src="swot_analysis.png" alt="تحليل SWOT">
-                <div class="gallery-caption">تحليل SWOT للمشروع</div>
-            </div>
-        </div>
-    </section>
-
-    <section style="background-color: var(--dusty-pink); border-radius: 20px;">
-        <h2 class="section-title" style="color: var(--darkest-green);">النتائج والأرقام (Results)</h2>
-        <div class="gallery-grid">
-            <div class="gallery-item" onclick="window.location='#rep1'">
-                <img src="performance_report_1.png" alt="تقرير أداء 1">
-                <div class="gallery-caption">تقارير نمو الحسابات</div>
-            </div>
-            <div class="gallery-item" onclick="window.location='#rep2'">
-                <img src="performance_report_2.png" alt="تقرير أداء 2">
-                <div class="gallery-caption">تحليل الحملات الإعلانية</div>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <h2 class="section-title">الإبداع والستوري بورد</h2>
-        <div class="gallery-grid">
             <div class="gallery-item" onclick="window.location='#sb1'">
-                <img src="storyboard_1.png" alt="ستوري بورد 1">
-                <div class="gallery-caption">مشهد 1: الفكرة الأولية</div>
-            </div>
-            <div class="gallery-item" onclick="window.location='#sb2'">
-                <img src="storyboard_2.png" alt="ستوري بورد 2">
-                <div class="gallery-caption">مشهد 2: تطوير الحبكة</div>
-            </div>
-             <div class="gallery-item" onclick="window.location='#sb3'">
-                <img src="storyboard_3.png" alt="ستوري بورد 3">
-                <div class="gallery-caption">مشهد 3: التنفيذ النهائي</div>
+                <img src="storyboard_1.png" alt="Storyboard">
+                <div class="gallery-caption">نموذج ستوري بورد</div>
             </div>
         </div>
     </section>
 
-    <section>
-        <h2 class="section-title">فيديوهات ومونتاج</h2>
-        <div class="video-grid">
-            <div class="video-card">
-                <div class="video-placeholder"><i class="fas fa-play-circle"></i></div>
-                <div class="video-info">
-                    <h3>Showreel Montage</h3>
-                    <p>أبرز أعمال المونتاج وصناعة الفيديو.</p>
-                    <a href="https://www.youtube.com" target="_blank" class="btn-watch">شاهد على يوتيوب</a>
-                </div>
-            </div>
-            <div class="video-card">
-                <div class="video-placeholder"><i class="fas fa-microphone-alt"></i></div>
-                <div class="video-info">
-                    <h3>Voice Over Demo</h3>
-                    <p>عينات تعليق صوتي (وثائقي - إعلاني - IVR).</p>
-                    <a href="#" target="_blank" class="btn-watch">استمع للعينة</a>
-                </div>
-            </div>
+    <section class="media-section">
+        <h2 class="section-title" style="color:white; border-bottom-color:white;">شاهد واستمع (Media)</h2>
+        <div class="media-container">
+            <a href="https://drive.google.com/drive/folders/1lw0UFWaubLApRc2TM3tZqQdCHlJSAxBQ?usp=sharing" target="_blank" class="media-card">
+                <i class="fas fa-play-circle media-icon"></i>
+                <span class="media-title">Showreel Montage</span>
+                <span class="media-desc">اضغط هنا لمشاهدة معرض الفيديوهات</span>
+            </a>
+            
+            <a href="https://drive.google.com/drive/folders/165edGnJylZajLIwwbosFWAiKuiLpUq6k?usp=drive_link" target="_blank" class="media-card">
+                <i class="fas fa-microphone-alt media-icon"></i>
+                <span class="media-title">Voice Over Demos</span>
+                <span class="media-desc">اضغط هنا للاستماع لعينات الصوت</span>
+            </a>
         </div>
     </section>
 
     <footer>
         <div class="footer-cta">
-            <h2>جاهزة لنبدأ قصة نجاح جديدة؟</h2>
-            <p>مشروعك القادم يستحق استراتيجية قوية وتنفيذ مبدع.</p>
+            <h2>مؤمنة إن كل كلمة وكل فكرة ممكن تفرق وتصنع تأثير حقيقي</h2>
+            <p>علشان كده البورتفوليو دا دعوة نبتدي سوا رحلة جديدة، نخلق فيها محتوى يعبر بصدق ويلمس الناس.</p>
             <br>
-            <a href="https://wa.me/201023084274" target="_blank" class="btn btn-whatsapp" style="padding: 15px 40px; font-size: 1.2rem;">
-                <i class="fab fa-whatsapp"></i> تواصلي معي الآن
-            </a>
+            <a href="https://wa.me/201023084274" class="btn-main"><i class="fab fa-whatsapp"></i> ابدأ الرحلة الآن</a>
         </div>
-        <br><br>
-        <p style="opacity: 0.6; font-size: 0.9rem;">&copy; 2025 Nour Motawea Portfolio. All Rights Reserved.</p>
+        
+        <div style="margin-top: 3rem; font-size: 0.9rem; opacity: 0.7;">
+            <p>6th of October City, Giza, Egypt</p>
+            <p>nourmotawea618@gmail.com</p>
+            <p>&copy; 2025 Nour Motawea. All Rights Reserved.</p>
+        </div>
     </footer>
 
-    <a href="https://wa.me/201023084274" class="floating-whatsapp" target="_blank" title="Chat on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+    <a href="https://wa.me/201023084274" target="_blank" class="float-wa"><i class="fab fa-whatsapp"></i></a>
 
     <div id="img1" class="lightbox"><a href="#" class="close-btn">&times;</a><img src="marketing_plan.png"></div>
     <div id="img2" class="lightbox"><a href="#" class="close-btn">&times;</a><img src="positioning_strategy.png"></div>
     <div id="img3" class="lightbox"><a href="#" class="close-btn">&times;</a><img src="content_agenda.png"></div>
-    <div id="img4" class="lightbox"><a href="#" class="close-btn">&times;</a><img src="distribution_plan.png"></div>
+    <div id="img4" class="lightbox"><a href="#" class="close-btn">&times;</a><img src="swot_analysis.png"></div>
     <div id="img5" class="lightbox"><a href="#" class="close-btn">&times;</a><img src="brand_persona.png"></div>
-    <div id="img6" class="lightbox"><a href="#" class="close-btn">&times;</a><img src="swot_analysis.png"></div>
-    <div id="rep1" class="lightbox"><a href="#" class="close-btn">&times;</a><img src="performance_report_1.png"></div>
-    <div id="rep2" class="lightbox"><a href="#" class="close-btn">&times;</a><img src="performance_report_2.png"></div>
     <div id="sb1" class="lightbox"><a href="#" class="close-btn">&times;</a><img src="storyboard_1.png"></div>
-    <div id="sb2" class="lightbox"><a href="#" class="close-btn">&times;</a><img src="storyboard_2.png"></div>
-    <div id="sb3" class="lightbox"><a href="#" class="close-btn">&times;</a><img src="storyboard_3.png"></div>
 
 </body>
 </html>
